@@ -14,6 +14,8 @@
 		E3D3DA501C445BEC004711CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D3DA4E1C445BEC004711CD /* LaunchScreen.storyboard */; };
 		E3D3DA5B1C445BEC004711CD /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3DA5A1C445BEC004711CD /* Pitch_PerfectTests.swift */; };
 		E3D3DA661C445BEC004711CD /* Pitch_PerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3DA651C445BEC004711CD /* Pitch_PerfectUITests.swift */; };
+		E3D3DAB01C45CA26004711CD /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3DAAF1C45CA26004711CD /* PlaySoundsViewController.swift */; };
+		E3D3DAB61C45D43C004711CD /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D3DAB51C45D43C004711CD /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E3D3DA611C445BEC004711CD /* Pitch PerfectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch PerfectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3DA651C445BEC004711CD /* Pitch_PerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectUITests.swift; sourceTree = "<group>"; };
 		E3D3DA671C445BEC004711CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D3DAAF1C45CA26004711CD /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		E3D3DAB51C45D43C004711CD /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = "Pitch Perfect/movie_quote.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		E3D3DA391C445BEB004711CD = {
 			isa = PBXGroup;
 			children = (
+				E3D3DAB51C45D43C004711CD /* movie_quote.mp3 */,
 				E3D3DA441C445BEC004711CD /* Pitch Perfect */,
 				E3D3DA591C445BEC004711CD /* Pitch PerfectTests */,
 				E3D3DA641C445BEC004711CD /* Pitch PerfectUITests */,
@@ -100,6 +105,7 @@
 				E3D3DA451C445BEC004711CD /* AppDelegate.swift */,
 				E3D3DA471C445BEC004711CD /* ViewController.swift */,
 				E3D3DA491C445BEC004711CD /* Main.storyboard */,
+				E3D3DAAF1C45CA26004711CD /* PlaySoundsViewController.swift */,
 				E3D3DA4C1C445BEC004711CD /* Assets.xcassets */,
 				E3D3DA4E1C445BEC004711CD /* LaunchScreen.storyboard */,
 				E3D3DA511C445BEC004711CD /* Info.plist */,
@@ -231,6 +237,7 @@
 			files = (
 				E3D3DA501C445BEC004711CD /* LaunchScreen.storyboard in Resources */,
 				E3D3DA4D1C445BEC004711CD /* Assets.xcassets in Resources */,
+				E3D3DAB61C45D43C004711CD /* movie_quote.mp3 in Resources */,
 				E3D3DA4B1C445BEC004711CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D3DA481C445BEC004711CD /* ViewController.swift in Sources */,
+				E3D3DAB01C45CA26004711CD /* PlaySoundsViewController.swift in Sources */,
 				E3D3DA461C445BEC004711CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +492,7 @@
 				E3D3DA6C1C445BEC004711CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3D3DA6D1C445BEC004711CD /* Build configuration list for PBXNativeTarget "Pitch PerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				E3D3DA6F1C445BEC004711CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3D3DA701C445BEC004711CD /* Build configuration list for PBXNativeTarget "Pitch PerfectUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				E3D3DA721C445BEC004711CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
