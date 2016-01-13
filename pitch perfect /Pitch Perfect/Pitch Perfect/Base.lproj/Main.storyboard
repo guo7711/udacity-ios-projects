@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,7 +52,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWW-6z-DXF"/>
-                                    <segue destination="kKm-Ak-HcQ" kind="show" id="Z91-tZ-3Uq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,6 +100,7 @@
                         <outlet property="RecordButton" destination="gqA-zi-Pq3" id="Bcx-N9-G0J"/>
                         <outlet property="RecordingLabel" destination="Cp6-E4-dno" id="RZY-wK-gUv"/>
                         <outlet property="stopButton" destination="0kN-Fi-vmK" id="Mfb-y7-oiO"/>
+                        <segue destination="kKm-Ak-HcQ" kind="show" identifier="stopRecording" id="Cpw-9W-Fa9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,28 +155,52 @@
                                     <action selector="stopButtonClicked:" destination="kKm-Ak-HcQ" eventType="touchUpInside" id="YVs-9H-i0T"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW4-r7-EOO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader"/>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="kKm-Ak-HcQ" eventType="touchUpInside" id="hoU-Wc-0Jf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-oo-lJX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="kKm-Ak-HcQ" eventType="touchUpInside" id="3GH-23-7hI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="STE-s3-DeS" firstAttribute="centerX" secondItem="7qD-cb-1Sz" secondAttribute="centerX" id="0WT-SZ-OWG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Taa-78-R4o" secondAttribute="trailing" constant="30" id="2ub-mn-BoE"/>
                             <constraint firstItem="cza-JP-YIL" firstAttribute="top" secondItem="s7o-GS-k0T" secondAttribute="bottom" constant="66" id="63k-DR-N4C"/>
+                            <constraint firstItem="qly-gP-1qC" firstAttribute="top" secondItem="YW4-r7-EOO" secondAttribute="bottom" constant="205" id="7DK-zK-bxN"/>
+                            <constraint firstItem="qly-gP-1qC" firstAttribute="top" secondItem="6eg-oo-lJX" secondAttribute="bottom" constant="205" id="B2p-SP-dc4"/>
                             <constraint firstItem="qly-gP-1qC" firstAttribute="top" secondItem="STE-s3-DeS" secondAttribute="bottom" constant="46" id="MA2-uG-6qu"/>
+                            <constraint firstItem="6eg-oo-lJX" firstAttribute="leading" secondItem="7qD-cb-1Sz" secondAttribute="leadingMargin" constant="30" id="OGa-XO-ceT"/>
                             <constraint firstItem="Taa-78-R4o" firstAttribute="top" secondItem="s7o-GS-k0T" secondAttribute="bottom" constant="66" id="Okv-gG-UUf"/>
                             <constraint firstItem="cza-JP-YIL" firstAttribute="leading" secondItem="7qD-cb-1Sz" secondAttribute="leadingMargin" constant="30" id="XPK-Ik-Mw5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YW4-r7-EOO" secondAttribute="trailing" constant="30" id="ll8-Ie-Dbd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="cza-JP-YIL"/>
                                 <exclude reference="Taa-78-R4o"/>
                                 <exclude reference="STE-s3-DeS"/>
+                                <exclude reference="YW4-r7-EOO"/>
+                                <exclude reference="6eg-oo-lJX"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="63k-DR-N4C"/>
                                 <exclude reference="XPK-Ik-Mw5"/>
                                 <exclude reference="2ub-mn-BoE"/>
                                 <exclude reference="Okv-gG-UUf"/>
+                                <exclude reference="OGa-XO-ceT"/>
+                                <exclude reference="ll8-Ie-Dbd"/>
                                 <exclude reference="0WT-SZ-OWG"/>
+                                <exclude reference="7DK-zK-bxN"/>
+                                <exclude reference="B2p-SP-dc4"/>
                                 <exclude reference="MA2-uG-6qu"/>
                             </mask>
                         </variation>
@@ -185,13 +209,19 @@
                                 <include reference="cza-JP-YIL"/>
                                 <include reference="Taa-78-R4o"/>
                                 <include reference="STE-s3-DeS"/>
+                                <include reference="YW4-r7-EOO"/>
+                                <include reference="6eg-oo-lJX"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="63k-DR-N4C"/>
                                 <include reference="XPK-Ik-Mw5"/>
                                 <include reference="2ub-mn-BoE"/>
                                 <include reference="Okv-gG-UUf"/>
+                                <include reference="OGa-XO-ceT"/>
+                                <include reference="ll8-Ie-Dbd"/>
                                 <include reference="0WT-SZ-OWG"/>
+                                <include reference="7DK-zK-bxN"/>
+                                <include reference="B2p-SP-dc4"/>
                                 <include reference="MA2-uG-6qu"/>
                             </mask>
                         </variation>
@@ -199,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wk-qB-cqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="252"/>
+            <point key="canvasLocation" x="2028" y="252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C2T-Ph-4Tk">
@@ -221,6 +251,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
